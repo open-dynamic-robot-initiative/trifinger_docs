@@ -17,9 +17,9 @@
 
 # -- Project information -----------------------------------------------------
 
-project = 'TriFinger Documentation'
-copyright = '2023, Max Planck Institute for Intelligent Systems'
-author = 'Max Planck Institute for Intelligent Systems'
+project = "TriFinger Documentation"
+copyright = "2023, Max Planck Institute for Intelligent Systems"
+author = "Max Planck Institute for Intelligent Systems"
 
 
 # -- General configuration ---------------------------------------------------
@@ -28,15 +28,16 @@ author = 'Max Planck Institute for Intelligent Systems'
 # extensions coming with Sphinx (named 'sphinx.ext.*') or your custom
 # ones.
 extensions = [
+    "sphinx.ext.todo",
 ]
 
 # Add any paths that contain templates here, relative to this directory.
-templates_path = ['_templates']
+templates_path = ["_templates"]
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.
 # This pattern also affects html_static_path and html_extra_path.
-exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
+exclude_patterns = ["_build", "Thumbs.db", ".DS_Store", "venv"]
 
 
 # -- Options for HTML output -------------------------------------------------
@@ -44,9 +45,30 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'alabaster'
+html_theme = "sphinx_material"
+
+# Material theme options
+html_theme_options = {
+    # Set the name of the project to appear in the navigation.
+    "nav_title": "TriFinger Documentation",
+    # Visible levels of the global TOC; -1 means unlimited
+    "globaltoc_depth": 1,
+    # If False, expand all TOC entries
+    "globaltoc_collapse": True,
+    # If True, show hidden TOC entries
+    "globaltoc_includehidden": False,
+}
+
+# Custom sidebar templates, must be a dictionary that maps document names
+# to template names.
+# This is theme-specific.
+html_sidebars = {
+    "**": ["logo-text.html", "globaltoc.html", "localtoc.html", "searchbox.html"]
+}
+
+html_title = "Main Documentation"
 
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
-html_static_path = ['_static']
+html_static_path = ["_static"]
