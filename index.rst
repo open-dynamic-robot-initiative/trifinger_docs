@@ -49,6 +49,12 @@ Content
 =======
 
 .. toctree::
+   :caption: How-to Guides
+   :maxdepth: 1
+
+   howto/installation
+
+.. toctree::
    :caption: References
    :maxdepth: 1
 

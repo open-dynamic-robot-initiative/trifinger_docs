@@ -2,14 +2,10 @@
 Software Package Overview
 *************************
 
-.. todo::
-
-   - mention treep ROBOT_FINGERS.
-   - not on this page but this docs should contain the installation instructions
-     (i.e. move from the package docs to here)
-   - probably not all packages need to be mentioned here
-
-   - Use intersphinx for documentation links
+Below the main software packages used for to the TriFinger robots are listed.  See
+:ref:`install_software` on how to install them.  Note that the installation will include
+some additional utility packages from the ODRI project.  Below are only the packages
+that are specifically written for the TriFinger robots.
 
 
 - **robot_interfaces** --- [`source <https://github.com/open-dynamic-robot-initiative/robot_interfaces>`__ | :doc:`docs <robot_interfaces:index>`]
@@ -49,15 +45,14 @@ Software Package Overview
    probably not list the below ones, just mention that there are more packages which are
    all cloned via treep.
 
-- cli_utils --- [`source <https://github.com/MPI-IS/cli_utils>`__]
-- googletest --- [`source <https://github.com/google/googletest>`__]
-- mpi_cmake_modules --- [`source <https://github.com/machines-in-motion/mpi_cmake_modules>`__]
-- pybind11 --- [`source <https://github.com/pybind/pybind11>`__]
-- pybind11_opencv --- [`source <https://github.com/open-dynamic-robot-initiative/pybind11_opencv>`__]
-- real_time_tools --- [`source <https://github.com/machines-in-motion/real_time_tools>`__]
-- serialization_utils --- [`source <https://github.com/MPI-IS/serialization_utils>`__]
-- shared_memory --- [`source <https://github.com/machines-in-motion/shared_memory>`__]
-- signal_handler --- [`source <https://github.com/MPI-IS/signal_handler>`__]
-- time_series --- [`source <https://github.com/machines-in-motion/time_series>`__]
-- yaml_utils --- [`source <https://github.com/machines-in-motion/yaml_utils>`__]
-
+   - cli_utils --- [`source <https://github.com/MPI-IS/cli_utils>`__]
+   - googletest --- [`source <https://github.com/google/googletest>`__]
+   - mpi_cmake_modules --- [`source <https://github.com/machines-in-motion/mpi_cmake_modules>`__]
+   - pybind11 --- [`source <https://github.com/pybind/pybind11>`__]
+   - pybind11_opencv --- [`source <https://github.com/open-dynamic-robot-initiative/pybind11_opencv>`__]
+   - real_time_tools --- [`source <https://github.com/machines-in-motion/real_time_tools>`__]
+   - serialization_utils --- [`source <https://github.com/MPI-IS/serialization_utils>`__]
+   - shared_memory --- [`source <https://github.com/machines-in-motion/shared_memory>`__]
+   - signal_handler --- [`source <https://github.com/MPI-IS/signal_handler>`__]
+   - time_series --- [`source <https://github.com/machines-in-motion/time_series>`__]
+   - yaml_utils --- [`source <https://github.com/machines-in-motion/yaml_utils>`__]
