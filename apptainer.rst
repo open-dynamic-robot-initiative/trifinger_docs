@@ -1,19 +1,16 @@
-.. _apptainer:
+.. _about_apptainer:
 
+***************************
 About Apptainer/Singularity
-===========================
+***************************
 
 .. todo::
 
-   This is just copied from robot_fingers
-
-   - Probably needs to be revised and maybe restructured.
-   - Remove from robot_fingers and link here instead.
    - Discuss base vs robot/user image.
 
 
 What is Apptainer?
-------------------
+==================
 
 Apptainer (formerly called "Singularity") is a tool to run software inside
 containers, similar to Docker. Compared to Docker it has a higher focus on
@@ -24,7 +21,7 @@ building a mounted workspace).
 
 
 Apptainer vs SingularityCE
---------------------------
+==========================
 
 `Apptainer <https://apptainer.org>`_ and `SingularityCE
 <https://sylabs.io/singularity/>`_ both emerged from the original Singularity project.
@@ -37,13 +34,15 @@ create an alias).
 
 
 Install Apptainer
------------------
+=================
 
 You can download pre-build packages of recent releases from the `Apptainer
 GitHub repository <https://github.com/apptainer/apptainer/releases/>`_.
 
 For example on Ubuntu, download the deb package (called
-"apptainer_X.Y.Z_amd64.deb") and install it with::
+"apptainer_X.Y.Z_amd64.deb") and install it with:
+
+.. code-block:: sh
 
     $ sudo apt install ./apptainer_X.Y.Z_amd64.deb
 
@@ -53,10 +52,12 @@ documentation`_.
 
 
 Get our Apptainer Image
------------------------
+=======================
 
 We provide an Apptainer image with all dependencies needed to build and run the software
-here.  You can download the latest version using::
+here.  You can download the latest version using:
+
+.. code-block:: sh
 
     apptainer pull oras://ghcr.io/open-dynamic-robot-initiative/trifinger_singularity/trifinger_base:latest
 
@@ -67,10 +68,12 @@ repository on GitHub
 
 
 Run Something in the Container
-------------------------------
+==============================
 
 To run the container in shell mode (i.e. opening a shell inside the container),
-the following is often enough::
+the following is often enough:
+
+.. code-block:: sh
 
     apptainer shell path/to/image.sif
 
@@ -84,9 +87,11 @@ A typical example would be a Python package installed in your home directory
 (which will then be available in the container) which is not compatible with
 versions of other packages inside the container.  To avoid these kind of issues
 it is recommended to use the following command to run the container in a more
-isolated way::
+isolated way:
 
-    export APPTAINERENV_DISPLAY=$DISPLAY
+.. code-block:: sh
+
+    export APPTAINERENV_DISPLAY=$DISPLAY  # <- you may want to put this line in your .bashrc
     apptainer shell -e --no-home --bind=$(pwd) path/to/image.sif
 
 The arguments explained:
@@ -106,16 +111,18 @@ Apptainer is run from the root directory of the workspace.
 
 
 Compatibility with Nvidia Drivers
-~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+---------------------------------
 
 When you are using Nvidia drivers and want to run a GUI-based application in the
-container, you may need to add the ``--nv`` flag::
+container, you may need to add the ``--nv`` flag:
+
+.. code-block:: sh
 
     apptainer shell --nv ... path/to/image.sif
 
 
 Add Custom Dependencies to the Container
-----------------------------------------
+========================================
 
 The image we provide already includes everything needed to run the robot
 and the simulation. However, you may need additional libraries to use
@@ -123,7 +130,9 @@ them in our own code, which are not yet present. In this case, you can
 create your own image which is based on our standard image but extends
 it with your additional dependencies.
 
-To extend the image, create *definition file* like the following::
+To extend the image, create *definition file* like the following:
+
+.. code-block:: singularity
 
     # Specify the name of the base image below
     Bootstrap: localimage
@@ -143,12 +152,10 @@ following command to build the image. Note that the base image
 (specified in the ``From:`` line) needs to be present in the directory in
 which you call the command.
 
-::
+.. code-block:: sh
 
     $ apptainer build user_image.sif path/to/user_image.def
 
 
 .. _official documentation: https://apptainer.org/docs/
 .. _Documentation for Definition Files: https://apptainer.org/docs/user/1.0/definition_files.html
-
-

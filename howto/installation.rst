@@ -14,7 +14,7 @@ Build Instructions
 ==================
 
 We provide a Singularity image with all required dependencies to build and run
-the software.  See :ref:`apptainer`.
+the software.  See :ref:`about_apptainer`.
 
 You can, of course, also use the package without Singularity.  In this case you
 need to install all dependencies locally, though.
@@ -75,7 +75,7 @@ With Singularity
 ~~~~~~~~~~~~~~~~
 
 Go to the root directory of your workspace (the one containing the "src" folder)
-and run the container in shell mode (see :ref:`apptainer`):
+and run the container in shell mode (see :ref:`about_apptainer`):
 
 .. code-block:: sh
 
