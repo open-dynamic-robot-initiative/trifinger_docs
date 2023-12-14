@@ -39,6 +39,9 @@ that are specifically written for the TriFinger robots.
       contains a drop-in replacement for the driver of trifinger_cameras, which
       also provides the object pose in its observations.
 
+- **trifinger_singularity** --- [`source <https://github.com/open-dynamic-robot-initiative/trifinger_singularity>`__]
+      Contains the definition files for the :ref:`Apptainer/Singularity <apptainer>`
+      images which can be used for building/running the software.
 
 .. todo::
 
