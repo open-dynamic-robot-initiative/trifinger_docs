@@ -8,15 +8,13 @@ How to Install the Software
 
    - Link to this page from docs of the individual packages (to avoid duplication)
    - This page can probably be restructured a bit.
-   - Move general Singularity/Apptainer docs here (currently links to robot_fingers
-     docs)
 
 
 Build Instructions
 ==================
 
 We provide a Singularity image with all required dependencies to build and run
-the software.  See :doc:`robot_fingers:doc/singularity`.
+the software.  See :ref:`apptainer`.
 
 You can, of course, also use the package without Singularity.  In this case you
 need to install all dependencies locally, though.
@@ -77,7 +75,7 @@ With Singularity
 ~~~~~~~~~~~~~~~~
 
 Go to the root directory of your workspace (the one containing the "src" folder)
-and run the container in shell mode (see :doc:`robot_fingers:doc/singularity`):
+and run the container in shell mode (see :ref:`apptainer`):
 
 .. code-block:: sh
 

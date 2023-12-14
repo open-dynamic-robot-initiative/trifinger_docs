@@ -53,6 +53,7 @@ Content
    :maxdepth: 1
 
    howto/installation
+   apptainer
 
 .. toctree::
    :caption: References
