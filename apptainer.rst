@@ -9,7 +9,7 @@ About Apptainer/Singularity
 
    - Probably needs to be revised and maybe restructured.
    - Remove from robot_fingers and link here instead.
-   - use `apptainer` instead of `singularity`.
+   - Discuss base vs robot/user image.
 
 
 What is Apptainer?
@@ -22,20 +22,18 @@ container are executed as the user of the host system which makes it much more
 convenient when touching files of the host system (as it is happening when
 building a mounted workspace).
 
-.. note::
 
-    `SingularityCE <https://sylabs.io/singularity/>`_ and `Apptainer
-    <https://apptainer.org>`_ both emerged from the original Singularity project.  So
-    far (state end of 2023) they are still mostly compatible but their features may
-    diverge over time.
+Apptainer vs SingularityCE
+--------------------------
 
-    In the following we assume that you are using Apptainer, however, it probably works
-    the same with SingularityCE.  Due to this, we are using the
-    command `singularity` in the following which should work with all versions
-    (Apptainer installs a corresponding alias).
+`Apptainer <https://apptainer.org>`_ and `SingularityCE
+<https://sylabs.io/singularity/>`_ both emerged from the original Singularity project.
+While their features may diverge more significantly over time, they are currently (state
+end of 2023) still mostly compatible.
 
-    If you are using Apptainer, you can replace `singularity` with `apptainer`
-    but both should work the same.
+This documentation assumes you are using Apptainer, however, it should work the same
+with SingularityCE.  Just replace "apptainer" with "singularity" in all the commands (or
+create an alias).
 
 
 Install Apptainer
@@ -45,7 +43,7 @@ You can download pre-build packages of recent releases from the `Apptainer
 GitHub repository <https://github.com/apptainer/apptainer/releases/>`_.
 
 For example on Ubuntu, download the deb package (called
-"apptainer_X.Y.Z_amd64.deb" and install it with::
+"apptainer_X.Y.Z_amd64.deb") and install it with::
 
     $ sudo apt install ./apptainer_X.Y.Z_amd64.deb
 
@@ -57,10 +55,10 @@ documentation`_.
 Get our Apptainer Image
 -----------------------
 
-We provide an Apptainer image with Ubuntu 20.04 with all dependencies needed to
-build and run the software here.  You can download the latest version using::
+We provide an Apptainer image with all dependencies needed to build and run the software
+here.  You can download the latest version using::
 
-    singularity pull oras://ghcr.io/open-dynamic-robot-initiative/trifinger_singularity/trifinger_base:latest
+    apptainer pull oras://ghcr.io/open-dynamic-robot-initiative/trifinger_singularity/trifinger_base:latest
 
 
 In case you prefer to build the image yourself, see the `trifinger_singularity
@@ -74,7 +72,7 @@ Run Something in the Container
 To run the container in shell mode (i.e. opening a shell inside the container),
 the following is often enough::
 
-    singularity shell path/to/image.sif
+    apptainer shell path/to/image.sif
 
 This will, however, be influenced by your local setup as environment variables
 are exported and the home directory is mounted by default.  Further the current
@@ -88,8 +86,8 @@ versions of other packages inside the container.  To avoid these kind of issues
 it is recommended to use the following command to run the container in a more
 isolated way::
 
-    export SINGULARITYENV_DISPLAY=$DISPLAY
-    singularity shell -e --no-home --bind=$(pwd) path/to/image.sif
+    export APPTAINERENV_DISPLAY=$DISPLAY
+    apptainer shell -e --no-home --bind=$(pwd) path/to/image.sif
 
 The arguments explained:
 
@@ -113,7 +111,7 @@ Compatibility with Nvidia Drivers
 When you are using Nvidia drivers and want to run a GUI-based application in the
 container, you may need to add the ``--nv`` flag::
 
-    singularity shell --nv ... path/to/image.sif
+    apptainer shell --nv ... path/to/image.sif
 
 
 Add Custom Dependencies to the Container
@@ -147,7 +145,7 @@ which you call the command.
 
 ::
 
-    $ singularity build --fakeroot user_image.sif path/to/user_image.def
+    $ apptainer build user_image.sif path/to/user_image.def
 
 
 .. _official documentation: https://apptainer.org/docs/
