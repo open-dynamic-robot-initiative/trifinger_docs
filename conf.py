@@ -58,6 +58,8 @@ html_theme_options = {
     "globaltoc_collapse": True,
     # If True, show hidden TOC entries
     "globaltoc_includehidden": False,
+    # Header of the local toc in the right column
+    "localtoc_label_text": "Page Content",
 }
 
 # Custom sidebar templates, must be a dictionary that maps document names
