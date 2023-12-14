@@ -12,7 +12,7 @@ About Apptainer/Singularity
 What is Apptainer?
 ==================
 
-Apptainer (formerly called "Singularity") is a tool to run software inside
+Apptainer_ (formerly called "Singularity") is a tool to run software inside
 containers, similar to Docker. Compared to Docker it has a higher focus on
 security and can be used without root permission.  Also programs in the
 container are executed as the user of the host system which makes it much more
@@ -23,10 +23,9 @@ building a mounted workspace).
 Apptainer vs SingularityCE
 ==========================
 
-`Apptainer <https://apptainer.org>`_ and `SingularityCE
-<https://sylabs.io/singularity/>`_ both emerged from the original Singularity project.
-While their features may diverge more significantly over time, they are currently (state
-end of 2023) still mostly compatible.
+Apptainer_ and SingularityCE_ both emerged from the original Singularity project. While
+their features may diverge more significantly over time, they are currently (state end
+of 2023) still mostly compatible.
 
 This documentation assumes you are using Apptainer, however, it should work the same
 with SingularityCE.  Just replace "apptainer" with "singularity" in all the commands (or
@@ -62,9 +61,8 @@ here.  You can download the latest version using:
     apptainer pull oras://ghcr.io/open-dynamic-robot-initiative/trifinger_singularity/trifinger_base:latest
 
 
-In case you prefer to build the image yourself, see the `trifinger_singularity
-repository on GitHub
-<https://github.com/open-dynamic-robot-initiative/trifinger_singularity>`_
+In case you prefer to build the image yourself, see the trifinger_singularity_
+repository on GitHub.
 
 
 Run Something in the Container
@@ -157,5 +155,8 @@ which you call the command.
     $ apptainer build user_image.sif path/to/user_image.def
 
 
+.. _Apptainer: https://apptainer.org
+.. _SingularityCE: https://sylabs.io/singularity
 .. _official documentation: https://apptainer.org/docs/
 .. _Documentation for Definition Files: https://apptainer.org/docs/user/1.0/definition_files.html
+.. _trifinger_singularity: https://github.com/open-dynamic-robot-initiative/trifinger_singularity
