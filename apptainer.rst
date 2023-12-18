@@ -6,7 +6,8 @@ About Apptainer/Singularity
 
 .. todo::
 
-   - Discuss base vs robot/user image.
+   - Briefly discuss the different images that are provided (refer to
+     trifinger_singularity README for details)
 
 
 What is Apptainer?

@@ -6,7 +6,6 @@ How to Install the Software
 
 .. todo::
 
-   - Link to this page from docs of the individual packages (to avoid duplication)
    - This page can probably be restructured a bit.
 
 
