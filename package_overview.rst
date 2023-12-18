@@ -42,20 +42,23 @@ that are specifically written for the TriFinger robots.
 - **trifinger_singularity** --- [`source <https://github.com/open-dynamic-robot-initiative/trifinger_singularity>`__]
       Contains the definition files for the :ref:`Apptainer/Singularity
       <about_apptainer>` images which can be used for building/running the software.
+      Images are built and hosted on GitHub, see the README of the repository on how to
+      pull them.
 
-.. todo::
+      Also see the README for a description of the different images that are provided.
 
-   probably not list the below ones, just mention that there are more packages which are
-   all cloned via treep.
 
-   - cli_utils --- [`source <https://github.com/MPI-IS/cli_utils>`__]
-   - googletest --- [`source <https://github.com/google/googletest>`__]
-   - mpi_cmake_modules --- [`source <https://github.com/machines-in-motion/mpi_cmake_modules>`__]
-   - pybind11 --- [`source <https://github.com/pybind/pybind11>`__]
-   - pybind11_opencv --- [`source <https://github.com/open-dynamic-robot-initiative/pybind11_opencv>`__]
-   - real_time_tools --- [`source <https://github.com/machines-in-motion/real_time_tools>`__]
-   - serialization_utils --- [`source <https://github.com/MPI-IS/serialization_utils>`__]
-   - shared_memory --- [`source <https://github.com/machines-in-motion/shared_memory>`__]
-   - signal_handler --- [`source <https://github.com/MPI-IS/signal_handler>`__]
-   - time_series --- [`source <https://github.com/machines-in-motion/time_series>`__]
-   - yaml_utils --- [`source <https://github.com/machines-in-motion/yaml_utils>`__]
+..   probably not list the below ones, just mention that there are more packages which are
+..   all cloned via treep.
+..
+..   - cli_utils --- [`source <https://github.com/MPI-IS/cli_utils>`__]
+..   - googletest --- [`source <https://github.com/google/googletest>`__]
+..   - mpi_cmake_modules --- [`source <https://github.com/machines-in-motion/mpi_cmake_modules>`__]
+..   - pybind11 --- [`source <https://github.com/pybind/pybind11>`__]
+..   - pybind11_opencv --- [`source <https://github.com/open-dynamic-robot-initiative/pybind11_opencv>`__]
+..   - real_time_tools --- [`source <https://github.com/machines-in-motion/real_time_tools>`__]
+..   - serialization_utils --- [`source <https://github.com/MPI-IS/serialization_utils>`__]
+..   - shared_memory --- [`source <https://github.com/machines-in-motion/shared_memory>`__]
+..   - signal_handler --- [`source <https://github.com/MPI-IS/signal_handler>`__]
+..   - time_series --- [`source <https://github.com/machines-in-motion/time_series>`__]
+..   - yaml_utils --- [`source <https://github.com/machines-in-motion/yaml_utils>`__]
