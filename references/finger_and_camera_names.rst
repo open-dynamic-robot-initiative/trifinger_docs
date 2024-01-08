@@ -1,3 +1,5 @@
+.. _finger_and_camera_names:
+
 ****************************
 Names of Fingers and Cameras
 ****************************

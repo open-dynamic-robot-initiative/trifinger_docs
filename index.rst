@@ -52,6 +52,7 @@ Content
    :caption: How-to Guides
    :maxdepth: 1
 
+   howto/howto_setup_pc.rst
    howto/installation
    apptainer
 
