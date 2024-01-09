@@ -59,8 +59,8 @@ Content
    :caption: References
    :maxdepth: 1
 
-   package_overview.rst
-   other_resources
+   references/package_overview.rst
+   references/other_resources
 
 
 
