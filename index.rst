@@ -59,6 +59,7 @@ Content
    :caption: References
    :maxdepth: 1
 
+   references/finger_and_camera_names.rst
    references/package_overview.rst
    references/other_resources
 
