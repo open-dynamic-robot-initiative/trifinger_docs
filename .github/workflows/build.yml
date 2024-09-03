@@ -28,7 +28,7 @@ jobs:
     steps:
       - name: Install graphviz
         run: |
-          apt-get install -y graphviz
+          sudo apt-get install -y graphviz
       - name: Build and Deploy Documentation
         uses: sphinx-notes/pages@v3
         with:
