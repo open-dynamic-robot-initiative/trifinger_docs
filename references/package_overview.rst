@@ -7,6 +7,13 @@ Below the main software packages used for to the TriFinger robots are listed.  S
 some additional utility packages from the ODRI project.  Below are only the packages
 that are specifically written for the TriFinger robots.
 
+|
+
+.. graphviz:: ../images/package_relationship.dot
+   :align: center
+
+|
+
 
 - **robot_interfaces** --- [`source <https://github.com/open-dynamic-robot-initiative/robot_interfaces>`__ | :doc:`docs <robot_interfaces:index>`]
       Generic interface for the frontend-backend-system through which the user

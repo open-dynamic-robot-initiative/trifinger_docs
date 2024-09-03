@@ -1,0 +1,24 @@
+# to view while editing, use `dot -Tpng package_relationship.dot | display`
+digraph PACKAGES {
+    edge [style=dashed fontsize=10];
+
+    # invisible edge to make the robot_interfaces node appear on top
+    robot_interfaces -> robot_fingers [style=invis];
+
+    entry [label="entry point\nfor users" shape=none];
+
+    entry -> robot_fingers [style=solid];
+    entry -> trifinger_simulation [style=solid];
+    robot_fingers -> robot_interfaces [label="interface\ndefinition"];
+    robot_fingers -> blmc_drivers [label="hardware\ncommunication"];
+    robot_fingers -> trifinger_cameras [label="camera\naccess"];
+    robot_fingers -> trifinger_object_tracking [label="camera + \nobject tracking"];
+    robot_fingers -> robot_properties_fingers [label="forward/inverse\nkinematics"];
+    trifinger_cameras -> robot_interfaces [label="interface\ndefinition"];
+
+    # only for some example scripts, so not really worth adding here
+    #trifinger_object_tracking -> robot_properties_fingers [label="forward/inverse\nkinematics"];
+
+    trifinger_object_tracking -> trifinger_cameras [label="camera\naccess"];
+    trifinger_simulation -> robot_properties_fingers [label="robot model"];
+}

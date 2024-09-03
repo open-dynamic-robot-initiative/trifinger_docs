@@ -29,6 +29,7 @@ author = "Max Planck Institute for Intelligent Systems"
 # ones.
 extensions = [
     "sphinx.ext.intersphinx",
+    "sphinx.ext.graphviz",
     "sphinx.ext.todo",
 ]
 
