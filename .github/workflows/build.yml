@@ -26,6 +26,9 @@ jobs:
       url: ${{ steps.deployment.outputs.page_url }}
 
     steps:
+      - name: Install graphviz
+        run: |
+          apt-get install -y graphviz
       - name: Build and Deploy Documentation
         uses: sphinx-notes/pages@v3
         with:
