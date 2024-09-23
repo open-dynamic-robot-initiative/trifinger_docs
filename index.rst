@@ -55,6 +55,7 @@ Content
    howto/howto_setup_pc.rst
    howto/installation
    apptainer
+   contribute
 
 .. toctree::
    :caption: References
